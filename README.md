@@ -27,19 +27,30 @@ catkin_make`
 
 If there are no errors, the source the workspace and run the bringup: <br />
 `source devel/setup.bash
-roslaunch ur_modern_driver ur5e_bringup.launch robot_ip:=IP_OF_ROBOT`
-The robot can go move to hard-coded points:
-`rosrun ur_modern_driver test_move.py`
+roslaunch ur_modern_driver ur5e_bringup.launch robot_ip:=IP_OF_ROBOT`<br />
+The robot can go move to hard-coded points:<br />
+`rosrun ur_modern_driver test_move.py`<br />
 
-Also, usuing RVIZ, you can give goals to the arm. To do that, open up a new terminal and:
+Also, usuing RVIZ, you can give goals to the arm. To do that, open up a new terminal and:<br />
 `source ~/catkin_ws/devel/setup.bash
-roslaunch ur5_e_moveit_config ur5_e_moveit_planning_execution.launch`
+roslaunch ur5_e_moveit_config ur5_e_moveit_planning_execution.launch`<br />
 
-and in another terminal:
+and in another terminal:<br />
 `source ~/catkin_ws/devel/setup.bash
-roslaunch ur5_e_moveit_config moveit_rviz.launch config:=true`
+roslaunch ur5_e_moveit_config moveit_rviz.launch config:=true`<br />
+
+To work with the gripper:
+
+`sudo usermod -a -G dialout $USER
+dmesg | grep tty
+sudo chmod 777  /dev/ttyACM0
+rosrun robotiq_2f_gripper_control Robotiq2FGripperRtuNode.py /dev/ttyACM0 `<br />
+And in a new terminal:
+
+`rosrun robotiq_2f_gripper_control Robotiq2FGripperSimpleController.py` <br />
 
 
+Once you are done working, please turn off the arm.
 
 
 
