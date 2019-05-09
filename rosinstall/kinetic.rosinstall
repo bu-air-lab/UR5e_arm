@@ -1,0 +1,14 @@
+- git:
+    local-name: universal_robot
+    uri: https://github.com/bu-air-lab/universal_robot.git
+    version: ur_e
+
+- git:
+    local-name: robotiq
+    uri: https://github.com/bu-air-lab/robotiq.git
+    version: kinetic-devel
+
+- git:
+    local-name: ur_modern_driver
+    uri: https://github.com/bu-air-lab/ur_modern_driver
+    version: kinetic-devel

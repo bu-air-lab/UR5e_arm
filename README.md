@@ -14,18 +14,18 @@ Now, go ahead and isntall the libraries below:
 
 Create a catkin workspace by running the commands below: <br />
 
-`mkdir –p ~/catkin_ws/src 
-cd catkin_ws
-catkin_make
-cd ~/catkin_ws/src
-git clone https://github.com/bu-air-lab/universal_robot.git
-cd ~/catkin_ws/src
-git clone https://github.com/bu-air-lab/robotiq.git
-cd ~/catkin_ws/src
+`mkdir –p ~/catkin_ws/src <br />
+cd catkin_ws <br />
+catkin_make <br />
+cd ~/catkin_ws/src <br />
+git clone https://github.com/bu-air-lab/universal_robot.git <br />
+cd ~/catkin_ws/src <br />
+git clone https://github.com/bu-air-lab/robotiq.git <br />
+cd ~/catkin_ws/src <br />
 git clone https://github.com/bu-air-lab/ur_modern_driver` <br />
 
 Now compile: <br />
-`cd ~/catkin_ws
+`cd ~/catkin_ws <br />
 catkin_make`
 
 If there are no errors, the source the workspace and run the bringup: <br />
@@ -44,9 +44,9 @@ roslaunch ur5_e_moveit_config moveit_rviz.launch config:=true`<br />
 
 To work with the gripper:
 
-`sudo usermod -a -G dialout $USER
-dmesg | grep tty
-sudo chmod 777  /dev/ttyACM0
+`sudo usermod -a -G dialout $USER <br />
+dmesg | grep tty <br />
+sudo chmod 777  /dev/ttyACM0 <br />
 rosrun robotiq_2f_gripper_control Robotiq2FGripperRtuNode.py /dev/ttyACM0 `<br />
 And in a new terminal:
 
