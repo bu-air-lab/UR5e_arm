@@ -4,29 +4,22 @@ If this is your first time, please check the [Wiki page](https://github.com/bu-a
 ----------------------------------------------------------------------------------------------------------------
 
 If ROS is installed but it is first time you are using your current laptop to work with the arm, <br />
-
-`echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc` <br />
-`source ~/.bashrc` <br />
-
+```
+$ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+$ source ~/.bashrc
+```
 Now, go ahead and isntall the libraries below:
-
-`sudo apt-get install ros-kinetic-moveit && sudo apt-get install ros-kinetic-ros-control ros-kinetic-ros-controllers && sudo apt-get install ros-kinetic-industrial-msgs && rosdep install robotiq_modbus_tcp && sudo apt-get install ros-kinetic-soem` <br />
-
+```
+$ sudo apt-get install ros-kinetic-moveit && sudo apt-get install ros-kinetic-ros-control ros-kinetic-ros-controllers && sudo apt-get install ros-kinetic-industrial-msgs && rosdep install robotiq_modbus_tcp && sudo apt-get install ros-kinetic-soem` <br />
+```
 Create a catkin workspace by running the commands below: <br />
 ```
 $ mkdir –p ~/catkin_ws/src
 $ cd catkin_ws
-$ catkin_make
-$ cd ~/catkin_ws/src
-$ git clone https://github.com/bu-air-lab/universal_robot.git
-$ cd ~/catkin_ws/src 
-$ git clone https://github.com/bu-air-lab/robotiq.git 
-$ cd ~/catkin_ws/src 
-$ git clone https://github.com/bu-air-lab/ur_modern_driver
+$ wstool init src https://raw.githubusercontent.com/bu-air-lab/UR5e_arm/master/rosinstall/kinetic.rosinstall
 ```
 Now compile: <br />
-```
-$ cd ~/catkin_ws 
+``` 
 $ catkin_make
 ```
 If there are no errors, the source the workspace and run the bringup: <br />
