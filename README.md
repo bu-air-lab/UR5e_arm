@@ -10,11 +10,11 @@ $ source ~/.bashrc
 ```
 Now, go ahead and isntall the libraries below:
 ```
-$ sudo apt-get install ros-kinetic-moveit && sudo apt-get install ros-kinetic-ros-control ros-kinetic-ros-controllers && sudo apt-get install ros-kinetic-industrial-msgs && rosdep install robotiq_modbus_tcp && sudo apt-get install ros-kinetic-soem` <br />
+$ sudo apt-get install ros-kinetic-moveit && sudo apt-get install ros-kinetic-ros-control ros-kinetic-ros-controllers && sudo apt-get install ros-kinetic-industrial-msgs && rosdep install robotiq_modbus_tcp && sudo apt-get install ros-kinetic-soem
 ```
 Create a catkin workspace by running the commands below: <br />
 ```
-$ mkdir –p ~/catkin_ws/src
+$ mkdir -p ~/catkin_ws/src
 $ cd catkin_ws
 $ wstool init src https://raw.githubusercontent.com/bu-air-lab/UR5e_arm/master/rosinstall/kinetic.rosinstall
 ```
