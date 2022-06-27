@@ -3,7 +3,7 @@ If this is your first time, please check the [Wiki page](https://github.com/bu-a
 
 ----------------------------------------------------------------------------------------------------------------
 
-If ROS is installed but it is first time you are using your current laptop to work with the arm, <br />
+If ROS is installed on Ubuntu 16.04 but it is first time you are using your current laptop to work with the arm, <br />
 ```
 $ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
 $ source ~/.bashrc
