@@ -48,7 +48,7 @@ To work with the gripper:
 sudo usermod -a -G dialout $USER 
 dmesg | grep tty 
 sudo chmod 777  /dev/ttyACM0 
-rosrun robotiq_2f_gripper_control Robotiq2FGripperRtuNode.py /dev/ttyACM0 `
+rosrun robotiq_2f_gripper_control Robotiq2FGripperRtuNode.py /dev/ttyACM0
 ```
 And in a new terminal:
 ```
